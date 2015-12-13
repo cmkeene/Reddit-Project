@@ -14,13 +14,15 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addFragment();
+
     }
 
     void addFragment(){
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.fragments_holder
-                        , PostsFragment.newInstance("askreddit"))
+                        //subreddit entered here
+                        , PostsFragment.newInstance("askreddit+funny"))
                 .commit();
     }
 }
